@@ -1,0 +1,19 @@
+.outer{
+    color: blue;
+}
+
+p{
+    color: brown;
+}
+#para{
+    color: rgb(47, 134, 255);
+}
+
+h1 span{
+    color: green;
+}
+
+
+.highlight{
+    color: yellow;
+}

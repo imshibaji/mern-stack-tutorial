@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid red; */
+}
+body{
+    background-color: gray;
+}
+
+.container{
+    width: 998px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Header Start */
+.header{
+    height: 100px;
+    background-color: bisque;
+}
+
+.header .left{
+    width: 33.33%;
+    float: left;
+}
+.header img{
+    width: 250px;
+    padding-top: 20px;
+ }
+
+.header .middle{
+    width: 33.33%;
+    float: left;
+}
+.header .right{
+    width: 33.33%;
+    float: right;
+}
+.header .contacts{
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+/* Header Ends */
+
+/* Contents Start */
+.contents{
+    height: 500px;
+    background-color: white;
+}
+.contents .menubar{
+   width: 25%;
+   float: left;
+}
+.contents .menubar ul{
+    list-style: none;
+    background-color: brown;
+}
+.contents .menubar li{
+   padding: 10px;
+   padding-left: 30px;
+}
+.contents .menubar li a{
+    color: white;
+    text-decoration: none;
+ }
+.contents .menubar li:hover{
+    background-color: aqua;
+ }
+ .contents .menubar li:hover a{
+    color: black;
+ }
+
+.contents .articles{
+    width: 75%;
+    float: left;
+ }
+ .contents .articles .content{
+    padding: 15px;
+ }
+
+/* Contents Ends */
+
+.footer{
+    height: 100px;
+    background-color: bisque;
+    text-align: center;
+    line-height: 100px;
+}

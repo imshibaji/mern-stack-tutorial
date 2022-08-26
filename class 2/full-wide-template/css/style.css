@@ -1,0 +1,114 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Responsive Breakpoints */
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+    .container{
+        width: 998px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .container{
+        width: 1100px;
+    }
+}
+@media only screen and (min-width: 1160px) {
+    .container{
+        width: 1200px;
+    }
+}
+@media only screen and (min-width: 1360px) {
+    .container{
+        width: 1400px;
+    }
+}
+/* Responsive Breakpoints */
+
+
+.menubar .left{
+    float: left;
+    padding-top: 10px;
+}
+
+
+.menubar .right{
+    float: right;
+    padding-top: 5px;
+}
+
+.menubar{
+    background-color: rgb(12, 12, 12);
+    color: whitesmoke;
+    height: 50px;
+}
+.menubar ul{
+    list-style: none;
+}
+.menubar ul li{
+    float: left;
+    padding-top: 10px;
+    position: relative;
+}
+.menubar ul li a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+.menubar ul li a:hover{
+    background-color: aqua;
+    color: black;
+}
+.active a{
+    background-color: aqua;
+    color: black;
+}
+
+.menubar ul li ul{
+    position: absolute;
+    background-color: black;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    display: none;
+}
+.menubar ul li:hover ul{
+    display: block;
+}
+/* Top Menubar End */
+
+/* Header Section */
+.header{
+    height: 100px;
+    background-color: bisque;
+}
+.header .left{
+    float: left;
+}
+.header .left img{
+    width: 70px;
+    padding: 10px;
+}
+
+.header .right{
+    float: right;
+    padding-top: 20px;
+    text-align: end;
+}
+.header .right a{
+    color: black;
+    text-decoration: none;
+}
+
+.contents{
+    height: 500px;
+}
+
+.footer{
+    height: 100px;
+    background-color: bisque;
+}

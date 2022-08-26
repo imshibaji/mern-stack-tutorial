@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="demo"></div>
+<div id="demo1"></div>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody id="users">
+        <td>Shibaji</td>
+        <td>Kolkata, India</td>
+    </tbody>
+</table>
+<script src="lib.js"></script>
+<script>
+getData('data.txt', function(data){
+    console.log(data);
+    document.getElementById('demo').innerHTML = data;
+});
+
+getData('data1.json', function(data){
+    var dataObj = JSON.parse(data);
+    console.log(dataObj);
+    var greet = '<h1>Hi '+dataObj[3].name+'!</h1>';
+    // greet += '<br>';
+    greet += '<h2>Are you from '+dataObj[3].loc+'?</h2>';
+    document.getElementById('demo1').innerHTML = greet;
+
+
+    // table data
+    var users = dataObj;
+    var table = '';
+    for(var i=0; i<users.length; i++){
+        table += '<tr>';
+        table += '<td>'+users[i].name+'</td>';
+        table += '<td>'+users[i].loc+'</td>';
+        table += '</tr>';
+    }
+
+    document.getElementById('users').innerHTML = table;
+});
+
+
+// https://jsonplaceholder.typicode.com/posts
+getData('https://jsonplaceholder.typicode.com/posts', function(data){
+    console.log(data);
+});
+</script>
+</body>
+</html>
