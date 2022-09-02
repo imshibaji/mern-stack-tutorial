@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1.text-center Contact Us
+    .row.justify-content-center
+        form.col-6(action="contact", method="post") 
+            .mb-3
+                label.form-label(for='name') Full Name
+                input#name.form-control(name="name" type='text' placeholder='input a name')
+            .mb-3
+                label.form-label(for='email') Email Address
+                input#email.form-control(name="email" type='text' placeholder='Input a email')
+            .mb-3
+                label.form-label(for='mobile') Mobile Number
+                input#mobile.form-control(name="mobile" type='text' placeholder='Input a mobile number')
+            .mb-3
+                label.form-label(for='message') Message
+                textarea#message.form-control(name="message", cols="30", rows="10" placeholder='Input a Message')
+            .mb-3
+                button.btn.btn-success(type="submit") Save
