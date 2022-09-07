@@ -1,0 +1,11 @@
+extends common/layout
+
+//- block navbar
+//-   div(style="margin-top:200px")
+
+block content
+  h1= message
+  h2= error.status
+  pre #{error.stack}
+  div.text-center
+    a.btn.btn-primary.mt-3(href="/") Back to Main Page 

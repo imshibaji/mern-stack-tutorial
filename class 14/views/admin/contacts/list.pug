@@ -1,9 +1,11 @@
-extends ../layout
+extends ../../common/admin-layout
 
 block content
     - console.log(added)
     if req.added
         .alert.alert-success.p-3 Data Added Successfully
+    if req.updated
+        .alert.alert-success.p-3 Data Updates Successfully
     if req.deleted
         .alert.alert-success.p-3 Data Deleted Successfully
     h1.text-center Contact List
@@ -22,6 +24,6 @@ block content
                     td=contact.mobile
                     td=contact.message
                     td
-                        a.btn.btn-primary(href="/contacts/"+contact.name) Show
-                        a.btn.btn-warning(href="/contacts/"+contact._id+'/edit') Edit
-                        a.btn.btn-danger(href="/contacts/"+contact._id+'/delete') Delete
+                        a.btn.btn-primary(href="/admin/contacts/"+contact.name) Show
+                        a.btn.btn-warning(href="/admin/contacts/"+contact._id+'/edit') Edit
+                        a.btn.btn-danger(href="/admin/contacts/"+contact._id+'/delete') Delete
