@@ -1,0 +1,11 @@
+extends ../common/admin-layout
+
+block content
+  h1 Welcome to Admin Dashboard
+  h2= title
+  pre=user
+  .row
+    .col
+      a.btn.btn-secondary.p-5.d-block(href="admin/contacts") Contact Section
+    .col
+      a.btn.btn-secondary.p-5.d-block(href="admin/users") Users Section

@@ -1,0 +1,14 @@
+extends common/layout
+
+block content
+    h1.text-center Login Page
+    .row.justify-content-center
+        form.col-6(action="login", method="post") 
+            .mb-3
+                label.form-label(for='username') Username
+                input#username.form-control(name="username" type='text' placeholder='input a username')
+            .mb-3
+                label.form-label(for='password') Password
+                input#password.form-control(name="password" type='text' placeholder='Input a password')
+            .mb-3
+                button.btn.btn-success(type="submit") Login

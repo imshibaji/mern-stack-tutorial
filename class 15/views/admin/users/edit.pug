@@ -1,0 +1,24 @@
+extends ../../common/admin-layout
+
+block content
+    h1.text-center Edit User
+    .row.justify-content-center
+        form.col-6(action="/admin/users/"+user._id+"/update", method="post")
+            .mb-3
+                label.form-label(for='name') Full Name
+                input#name.form-control(name="name" type='text' placeholder='input a name', value=user.name)
+            .mb-3
+                label.form-label(for='username') Username
+                input#email.form-control(name="username" type='text' placeholder='Input a Username' value=user.username)
+            .mb-3
+                label.form-label(for='password') Password
+                input#mobile.form-control(name="password" type='text' placeholder='Input a Password' value=user.password)
+            .mb-3
+                label.form-label(for='role') Role
+                select#role.form-select(name="role")
+                    if(user.role=='admin')
+                        option(value="admin", selected) Admin
+                    else
+                        option(value="user", selected) User
+            .mb-3
+                button.btn.btn-success(type="submit") Save
