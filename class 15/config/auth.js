@@ -33,12 +33,16 @@ class Auth{
 
     static logout(){
         return function(req, res, next){
-            req.user = null;
-            if(req.user){
-                next();
-            }else{
+            // req.user = null;
+            // if(req.user){
+                // next();
+            // }else{
+                // res.redirect('/login');
+            // }
+            req.logout(function(err) {
+                if (err) { return next(err); }
                 res.redirect('/login');
-            }
+            });
         }
     }
 
