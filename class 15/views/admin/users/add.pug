@@ -3,7 +3,7 @@ extends ../../common/admin-layout
 block content
     h1.text-center Add User
     .row.justify-content-center
-        form.col-6(action="/admin/users", method="post")
+        form.col-6(action="/admin/users", enctype="multipart/form-data", method="post")
             .mb-3
                 label.form-label(for='name') Full Name
                 input#name.form-control(name="name" type='text' placeholder='input a name')
@@ -13,6 +13,9 @@ block content
             .mb-3
                 label.form-label(for='password') Password
                 input#mobile.form-control(name="password" type='text' placeholder='Input a Password')
+            .mb-3
+                label.form-label(for='image') Image
+                input#image.form-control(name="image" type='file' placeholder='Input a File')
             .mb-3
                 label.form-label(for='role') Role
                 select#role.form-select(name="role")

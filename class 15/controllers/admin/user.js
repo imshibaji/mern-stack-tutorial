@@ -12,8 +12,7 @@ class UserController{
     static async show(req, res) {
         const findBy = {name: req.params.name} || '';
         const user = await User.find(findBy);
-        // res.json(contacts);
-        res.render('admin/users/show', {user});
+        res.render('admin/users/show', {user: user[0]});
     }
 
     static async add(req, res) {
@@ -21,7 +20,13 @@ class UserController{
     }
 
     static async create(req, res){
-        const body = req.body;
+        const body = {
+            name: req.body.name,
+            username: req.body.username,
+            password: req.body.password,
+            role: req.body.role,
+            image: req.file.filename
+        };
         const user = new User(body);
         user.save();
         if(user){
@@ -41,7 +46,8 @@ class UserController{
             name: req.body.name,
             username: req.body.username,
             password: req.body.password,
-            role: req.body.role
+            role: req.body.role,
+            image: req.file.filename
         });
         if(result){
             res.redirect('/admin/users?updated=true');

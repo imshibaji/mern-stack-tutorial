@@ -23,6 +23,8 @@ block content
                 th Actions
             each user in users
                 tr
+                    td 
+                        img(src='/uploads/'+ (user.image) width=80)
                     td=user.name
                     td=user.username
                     td=user.role
